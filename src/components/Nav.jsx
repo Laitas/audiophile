@@ -4,7 +4,8 @@ import { ReactComponent as Cart } from '../assets/shared/desktop/icon-cart.svg'
 import {Link} from 'react-router-dom'
 const Nav = () => {
     return (
-        <nav className='bg-black p-4 border-b border-gray flex justify-between'>
+        <nav className='bg-black flex justify-center'>
+            <div className="md:w-11/12 md:px-0 px-8 w-screen py-8 border-b border-gray-600 flex justify-between">
             <section>
                 <Link to='/'>
                 <Logo className="cursor-pointer"/>
@@ -21,6 +22,7 @@ const Nav = () => {
             <section>
                 <Cart className="cursor-pointer"/>
             </section>
+            </div>
         </nav>
     )
 }
