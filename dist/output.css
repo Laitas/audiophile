@@ -588,6 +588,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.my-9 {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -822,6 +832,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[410px\] {
   max-width: 410px;
+}
+
+.max-w-\[1440px\] {
+  max-width: 1440px;
 }
 
 .flex-1 {
@@ -1090,6 +1104,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1163,6 +1181,31 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-orange {
+  --tw-text-opacity: 1;
+  color: rgb(216 125 74 / var(--tw-text-opacity));
+}
+
+.text-custom-gray {
+  --tw-text-opacity: 1;
+  color: rgb(241 241 241 / var(--tw-text-opacity));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .caret-orange {
@@ -1330,6 +1373,16 @@ code {
     position: absolute;
   }
 
+  .md\:mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .md\:my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   .md\:ml-24 {
     margin-left: 6rem;
   }
@@ -1372,6 +1425,10 @@ code {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-row-reverse {
+    flex-direction: row-reverse;
   }
 
   .md\:flex-col {
@@ -1450,6 +1507,13 @@ code {
   }
 
   .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
   }
