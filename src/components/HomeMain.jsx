@@ -79,7 +79,7 @@ const HomeMain = () => {
           )}
         </div>
         <div className="w-full rounded min-h-[200px] bg-custom-gray sm:w-1/2 w-full sm:ml-4 mt-4 sm:mt-0 flex flex-col justify-center p-4">
-          <h2 className="font-bold uppercase md:text-6xl sm:text-4xl text-2xl mb-4">
+          <h2 className="font-bold uppercase sm:text-4xl text-2xl mb-4">
             YX1 Earphones
           </h2>
           <div>
