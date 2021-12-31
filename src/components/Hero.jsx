@@ -1,10 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Button from './Button'
-import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
-    const navigate = useNavigate()
-
     return(
 
         <header className='bg-black flex justify-center'>
@@ -14,7 +12,9 @@ const Hero = () => {
         <h1 className='md:text-6xl text-4xl uppercase text-white py-8'>XX99 MARK II Headphones</h1>
         <p className='text-white'>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
         <div className='my-8'>
-        <Button onClick={()=> navigate('/xx99-mark-two-headphones')} text="See product"/>
+            <Link to={'/headphones/xx99-mark-two-headphones'}>
+        <Button text="See product"/>
+            </Link>
         </div>
         </div>
         </div>

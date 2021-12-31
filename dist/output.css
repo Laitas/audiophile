@@ -437,6 +437,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
+  --tw-blur: var(--tw-empty,/*!*/ /*!*/);
+  --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
+  --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
+  --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
+  --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-invert: var(--tw-empty,/*!*/ /*!*/);
+  --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
+  --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
+  --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
+  --tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .fixed {
@@ -588,6 +598,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: -100vh;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -676,6 +690,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -722,6 +746,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mr-4 {
   margin-right: 1rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .flex {
@@ -834,6 +862,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .min-h-\[207px\] {
   min-height: 207px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-20 {
@@ -1161,6 +1193,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 5rem;
 }
 
+.p-12 {
+  padding: 3rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1213,6 +1249,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-20 {
   padding-top: 5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {
@@ -1330,6 +1370,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(250 250 250 / var(--tw-text-opacity));
 }
 
+.text-red-100 {
+  --tw-text-opacity: 1;
+  color: rgb(254 226 226 / var(--tw-text-opacity));
+}
+
 .caret-orange {
   caret-color: #D87D4A;
 }
@@ -1344,6 +1389,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.filter {
+  -webkit-filter: var(--tw-filter);
+          filter: var(--tw-filter);
 }
 
 .transition-all {
@@ -1376,6 +1426,30 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.odd\:flex-row-reverse:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.odd\:bg-black:nth-child(odd) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.odd\:bg-red-100:nth-child(odd) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
+.even\:rotate-180:nth-child(even) {
+  --tw-rotate: 180deg;
+  -webkit-transform: var(--tw-transform);
+          transform: var(--tw-transform);
+}
+
+.even\:flex-row-reverse:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .hover\:rotate-90:hover {
@@ -1533,6 +1607,16 @@ code {
     margin-bottom: 0px;
   }
 
+  .md\:my-12 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .md\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
   .md\:ml-24 {
     margin-left: 6rem;
   }
@@ -1561,6 +1645,14 @@ code {
     margin-left: 1rem;
   }
 
+  .md\:ml-8 {
+    margin-left: 2rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:max-h-\[560px\] {
     max-height: 560px;
   }
@@ -1575,6 +1667,10 @@ code {
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:flex-1 {
+    flex: 1 1 0%;
   }
 
   .md\:flex-row {
@@ -1633,6 +1729,10 @@ code {
     padding: 2rem;
   }
 
+  .md\:p-24 {
+    padding: 6rem;
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -1667,6 +1767,18 @@ code {
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .even\:md\:ml-8:nth-child(even) {
+    margin-left: 2rem;
+  }
+
+  .even\:md\:max-h-\[560px\]:nth-child(even) {
+    max-height: 560px;
+  }
+
+  .md\:even\:flex-row-reverse:nth-child(even) {
+    flex-direction: row-reverse;
   }
 }
 

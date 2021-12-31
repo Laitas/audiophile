@@ -1,8 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router";
+import {Link} from 'react-router-dom'
 import Button from "./Button";
 const CategoryCard = ({ category, img, className }) => {
-  const navigate = useNavigate()
   return (
     <div className={`w-full flex items-center justify-center ${className}`}>
     <div className="relative w-full max-w-[350px] min-h-[160px] max-h-[200px] bg-custom-light-gray rounded-md pt-24 pb-8 px-4 shadow-md hover:shadow-lg transition flex flex-col items-center">
@@ -13,7 +11,9 @@ const CategoryCard = ({ category, img, className }) => {
         </div>
         <div className="flex items-center flex-col">
           <h3 className="uppercase font-bold">{category}</h3>
-          <Button v={3} onClick={() => navigate(`/${category.toLowerCase()}`)} text={"shop"} />
+          <Link to={'/' + category}>
+          <Button v={3} text={"shop"} />
+          </Link>
          </div>
     </div>
 </div>
