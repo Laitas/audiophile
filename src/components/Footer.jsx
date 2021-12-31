@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-black py-8 px-6 flex flex-col sm:text-left text-center">
-      <div className="flex  items-center sm:items-start md:justify-between flex-col md:flex-row my-4">
+      <div className="flex items-center sm:items-start md:justify-between flex-col md:flex-row my-4">
         <Logo />
         <ul className="flex my-4 md:my-0 flex-col sm:flex-row">
           <li className="uppercase text-white mr-2 hover:text-orange my-2 sm:my-0">

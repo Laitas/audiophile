@@ -6,7 +6,7 @@ import PreFooter from '../components/PreFooter'
 
 const Homepage = () => {
     return (
-        <div>
+        <div className=''>
             <Hero/>
             <div className="w-11/12 flex flex-col max-w-[1440px] mx-auto">
             <CategoriesPreview />
