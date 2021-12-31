@@ -1498,6 +1498,11 @@ code {
     padding: 3rem;
   }
 
+  .sm\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
   .sm\:text-left {
     text-align: left;
   }
@@ -1550,6 +1555,10 @@ code {
 
   .md\:-mb-20 {
     margin-bottom: -5rem;
+  }
+
+  .md\:ml-4 {
+    margin-left: 1rem;
   }
 
   .md\:max-h-\[560px\] {

@@ -1,6 +1,5 @@
 import React from 'react'
 import CategoriesPreview from '../components/CategoriesPreview'
-import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import HomeMain from '../components/HomeMain'
 import PreFooter from '../components/PreFooter'
@@ -13,7 +12,6 @@ const Homepage = () => {
             <CategoriesPreview />
             <HomeMain/>
             <PreFooter/>
-            <Footer/>
             </div>
         </div>
     )

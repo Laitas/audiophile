@@ -8,7 +8,7 @@ const PreFooter = () => {
   const [width] = useWindowWidth();
   return (
     <div className="flex flex-col md:flex-row-reverse pb-6">
-      <div className="flex flex-1 max-h-[600px]">
+      <div className="flex flex-1 md:ml-4 max-h-[600px]">
         {width <= 640 ? (
           <img className="w-full rounded" src={ImageMobile} alt="" />
         ) : (
@@ -19,7 +19,7 @@ const PreFooter = () => {
           />
         )}
       </div>
-      <div className="md:text-left md:mx-6 text-center flex flex-1 flex-col justify-center">
+      <div className="md:text-left text-center flex flex-1 flex-col justify-center">
         <h3 className="my-6 xl:text-6xl sm:text-4xl text-2xl uppercase font-bold">
           Bringing you the <span className="text-orange">best</span> audio gear
         </h3>
