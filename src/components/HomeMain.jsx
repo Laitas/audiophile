@@ -35,7 +35,7 @@ const HomeMain = () => {
             truly remarkable sound
           </p>
           <div className="">
-            <Link to="/zx9-speaker">
+            <Link to="speakers/zx9-speaker">
               <Button v={"2inverse"} text={"See product"} />
             </Link>
           </div>
@@ -47,7 +47,7 @@ const HomeMain = () => {
           <h2 className="font-bold uppercase md:text-6xl sm:text-4xl text-2xl mb-4">
             ZX7 Speaker
           </h2>
-          <Link to="/zx7-speaker">
+          <Link to="speakers/zx7-speaker">
             <Button v={2} text={"see product"} />
           </Link>
         </div>
@@ -83,7 +83,7 @@ const HomeMain = () => {
             YX1 Earphones
           </h2>
           <div>
-            <Link to={"yx1-earphones"}>
+            <Link to={"earphones/yx1-earphones"}>
               <Button v={2} text={"see product"} />
             </Link>
           </div>
