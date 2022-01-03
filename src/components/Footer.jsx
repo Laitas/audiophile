@@ -6,7 +6,8 @@ import { ReactComponent as Insta} from "../assets/shared/desktop/icon-instagram.
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="bg-black py-8 px-6 flex flex-col sm:text-left text-center">
+    <footer className="bg-black py-8 flex flex-col sm:text-left items-center text-center">
+      <div className="w-11/12">
       <div className="flex items-center sm:items-start md:justify-between flex-col md:flex-row my-4">
         <Logo />
         <ul className="flex my-4 md:my-0 flex-col sm:flex-row">
@@ -43,6 +44,7 @@ const Footer = () => {
               <Insta/>
               </Link>
           </div>
+      </div>
       </div>
     </footer>
   );
