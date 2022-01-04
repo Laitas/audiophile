@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, {useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import Button from "./Button";
+import CheckoutModal from "./CheckoutModal";
 
 const Summary = () => {
   const { cart, total } = useContext(CartContext);
-
+  const [modal,showModal] = useState(false)
   return (
     <div className="font-bold">
       <h2 className="mb-8">Summary</h2>
@@ -49,8 +50,9 @@ const Summary = () => {
         <p className="text-orange">$ {(total + 50).toLocaleString()}</p>
       </div>
       <div className="flex flex-col">
-      <Button text={"continue & pay"}/>
+      <Button onClick={() => showModal(true)} text={"continue & pay"}/>
       </div>
+      {modal && <CheckoutModal showModal={showModal}/>}
     </div>
   );
 };

@@ -745,6 +745,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   float: left;
 }
 
+.m-6 {
+  margin: 1.5rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -965,6 +973,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 2rem;
 }
 
+.-mt-1 {
+  margin-top: -0.25rem;
+}
+
+.-mt-4 {
+  margin-top: -1rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1067,6 +1083,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-5 {
   height: 1.25rem;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .max-h-\[200\] {
@@ -1215,6 +1235,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .min-w-\[172px\] {
@@ -1433,6 +1457,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-gray-600 {
@@ -1687,6 +1715,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1824,6 +1856,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .caret-orange {
@@ -2286,6 +2323,10 @@ code {
     grid-row-end: 1;
   }
 
+  .sm\:m-6 {
+    margin: 1.5rem;
+  }
+
   .sm\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -2326,6 +2367,10 @@ code {
 
   .sm\:-ml-8 {
     margin-left: -2rem;
+  }
+
+  .sm\:-mt-4 {
+    margin-top: -1rem;
   }
 
   .sm\:grid {
@@ -2442,6 +2487,10 @@ code {
 
   .sm\:p-8 {
     padding: 2rem;
+  }
+
+  .sm\:p-6 {
+    padding: 1.5rem;
   }
 
   .sm\:px-24 {
