@@ -1,16 +1,19 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState, useContext} from 'react'
 import { useNavigate,useParams } from 'react-router';
 import Button from '../components/Button';
 import CategoriesPreview from '../components/CategoriesPreview';
 import PreFooter from '../components/PreFooter';
 import QuantityButton from '../components/QuantityButton';
 import RandomItem from '../components/RandomItem';
+import { CartContext } from '../context/CartContext';
 import data from '../data.json'
 import useWindowWidth from '../hooks/useWindowWidth';
 
 const Product = () => {
     const [width] = useWindowWidth()
     const [randomIDS,setRandomIDS] = useState([])
+    const [qty,setQty] = useState(1)
+    const {addItem} = useContext(CartContext)
     const params = useParams()
     const navigate = useNavigate()
     const product = data.find(product => product.slug === params.id)
@@ -20,6 +23,7 @@ const Product = () => {
     const array = ids.filter(current => current !== product.id)
     
     useEffect(()=>{
+        setQty(1)
         //FISHER-YATES SHUFFLE
             let i = array.length
             let j = 0
@@ -36,11 +40,11 @@ const Product = () => {
             }      
             return setRandomIDS(array);
     },[params.id])
-    const {  gallery, includes, features, price, description, image, name } = product
+    const {  gallery, includes, features, price, description, image, name, quantity } = product
     return (
         <div className="w-11/12 flex flex-col max-w-[1440px] mt-8 mx-auto">
             <div className="my-6">
-            <button onClick={()=> navigate(-1)} className='text-gray-500 cursor-pointer'>Go Back</button>
+            <button onClick={()=> navigate(-1)} className='text-gray-500 cursor-pointer hover:underline'>Go Back</button>
             </div>
             <div className="">
                 <div className="flex flex-col sm:flex-row">
@@ -53,8 +57,10 @@ const Product = () => {
             <p className='text-gray-500'>{description}</p>
             <p className='font-bold text-2xl mt-4'><span>$</span> {price.toLocaleString()}</p>
             <div className="mt-4 flex">
-                <QuantityButton />
-                <Button text={'Add to cart'} />
+                <div className="w-[120px] mr-4">
+                <QuantityButton  quantity={quantity} item={product} qty={qty} setQty={setQty}/>
+                </div>
+                <Button onClick={()=> addItem(product, qty)} text={'Add to cart'} />
             </div>
         </div>
         </div>

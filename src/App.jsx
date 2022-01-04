@@ -6,11 +6,13 @@ import Speakers from "./pages/Speakers";
 import Headphones from "./pages/Headphones";
 import Earphones from "./pages/Earphones";
 import Product from "./pages/Product";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <CartProvider>
       <div className="min-h-screen">
       <Nav/>
       <Routes>
@@ -22,6 +24,7 @@ function App() {
       </Routes>
       </div>
       <Footer />
+      </CartProvider>
       </BrowserRouter>
     </div>
   );
