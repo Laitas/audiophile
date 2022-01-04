@@ -39,6 +39,8 @@ const Product = () => {
                 
             }      
             return setRandomIDS(array);
+            // If I include array as it's asking, I get infinite loop
+            // eslint-disable-next-line react-hooks/exhaustive-deps
     },[params.id])
     const {  gallery, includes, features, price, description, image, name, quantity } = product
     return (
