@@ -41,7 +41,7 @@ const Cart = ({ dropdown }) => {
                   src={"." + image.desktop}
                   alt={name}
                 />
-                <div className="flex flex-col justify-center sm:mr-8 mr-4 sm:-ml-4 -ml-1">
+                <div className="flex flex-col justify-center min-w-[80px] sm:mr-8 mr-4 sm:-ml-4 -ml-1">
                   <p className="font-bold sm:mb-2 mb-1">
                     {name
                       .replace("Headphones", "")

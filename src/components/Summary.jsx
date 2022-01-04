@@ -7,7 +7,7 @@ const Summary = () => {
   const { cart, total } = useContext(CartContext);
   const [modal,showModal] = useState(false)
   return (
-    <div className="font-bold">
+    <div className="font-bold w-full">
       <h2 className="mb-8">Summary</h2>
       {cart.map((item) => {
         const { image, name, quantity, price, id } = item;

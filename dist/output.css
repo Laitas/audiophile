@@ -1249,6 +1249,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-width: 170px;
 }
 
+.min-w-\[80px\] {
+  min-width: 80px;
+}
+
 .max-w-md {
   max-width: 28rem;
 }
