@@ -7,6 +7,7 @@ import Headphones from "./pages/Headphones";
 import Earphones from "./pages/Earphones";
 import Product from "./pages/Product";
 import { CartProvider } from "./context/CartContext";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/speakers' element={<Speakers/>}/>
       <Route path='/headphones' element={<Headphones/>}/>
       <Route path='/earphones' element={<Earphones/>}/>
+      <Route path='/checkout' element={<Checkout/>}/>
       <Route path='/:page/:id' element={<Product/>}/>
       </Routes>
       </div>

@@ -1,5 +1,6 @@
 import {useEffect, useState, useContext} from 'react'
-import { useNavigate,useParams } from 'react-router';
+import { useParams } from 'react-router';
+import BackButton from '../components/BackButton';
 import Button from '../components/Button';
 import CategoriesPreview from '../components/CategoriesPreview';
 import PreFooter from '../components/PreFooter';
@@ -15,7 +16,6 @@ const Product = () => {
     const [qty,setQty] = useState(1)
     const {addItem} = useContext(CartContext)
     const params = useParams()
-    const navigate = useNavigate()
     const product = data.find(product => product.slug === params.id)
 
     // Rest of the ids except for the one we're viewing rn
@@ -44,7 +44,7 @@ const Product = () => {
     return (
         <div className="w-11/12 flex flex-col max-w-[1440px] mt-8 mx-auto">
             <div className="my-6">
-            <button onClick={()=> navigate(-1)} className='text-gray-500 cursor-pointer hover:underline'>Go Back</button>
+                <BackButton/>
             </div>
             <div className="">
                 <div className="flex flex-col sm:flex-row">
