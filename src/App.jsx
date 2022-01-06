@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import { BrowserRouter,Routes,Route} from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import LoadingSpinner from './components/LoadingSpinner'
+import ScrollToTop from "./components/ScrollToTop";
 // PAGES 
 const Homepage = lazy(() => import('./pages/Homepage'));
 const Speakers = lazy(() => import('./pages/Speakers'));
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <CartProvider>
+        <ScrollToTop/>
       <div className="min-h-screen">
       <Nav/>
       <Suspense fallback={<LoadingSpinner/>}>
