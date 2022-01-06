@@ -4,7 +4,7 @@ import useOutsideClick from '../hooks/useOutsideClick'
 import {Link} from 'react-router-dom'
 import Button from './Button'
 const CheckoutModal = ({showModal}) => {
-    const {cart, total,setCart} = useContext(CartContext)
+    const {cart, total,clearCart} = useContext(CartContext)
     const ref = useRef()
     useOutsideClick(ref, () => showModal(false));
     const { id,name,image,price,quantity} = cart[0]
@@ -48,7 +48,7 @@ const CheckoutModal = ({showModal}) => {
           </div>
             </div>
                         <Link className='flex flex-col' to='/'>
-                        <Button onClick={()=> setCart([])} text={"Back to home"} />
+                        <Button onClick={()=> clearCart()} text={"Back to home"} />
                         </Link>
             </div>
         </div>

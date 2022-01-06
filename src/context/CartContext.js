@@ -23,6 +23,11 @@ const CartProvider = ({children}) => {
         if(existingItem.quantity <= 1){
             setCart(cart.filter(item => item.id !== existingItem.id))
         }
+        localStorage.setItem('cartItems', JSON.stringify([]))
+    }
+    const clearCart = () =>{
+        setCart([])
+        localStorage.setItem('cartItems', JSON.stringify([]))
     }
     useEffect(() =>{
         const sumOfTotal = cart.reduce(
@@ -35,9 +40,18 @@ const CartProvider = ({children}) => {
             0
             );
             setItemsTotal(sumOfTotalItems)
-    },[cart])
-
-    const value = { cart,setCart,addItem,total,increase,decrease,itemsTotal }
+            console.log(cart);
+            if(cart.length > 0){
+                localStorage.setItem('cartItems', JSON.stringify(cart))
+            }
+        },[cart])
+    useEffect(() =>{
+        const cartItems = JSON.parse(localStorage.getItem('cartItems'))
+        if (cartItems) {
+            setCart(cartItems)
+        }
+    },[])
+    const value = { cart,setCart,addItem,total,increase,decrease,itemsTotal, clearCart }
     return (
         <CartContext.Provider value={value}>
             {children}

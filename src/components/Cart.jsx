@@ -6,7 +6,7 @@ import Button from "./Button";
 import QuantityButton from "./QuantityButton";
 
 const Cart = ({ dropdown }) => {
-  const { cart, setCart, total, itemsTotal } = useContext(CartContext);
+  const { cart, clearCart, total, itemsTotal } = useContext(CartContext);
   const ref = useRef();
   useOutsideClick(ref, () => dropdown(false));
 
@@ -27,7 +27,7 @@ const Cart = ({ dropdown }) => {
             <h2 className="uppercase font-bold">cart ({itemsTotal})</h2>
             <button
               className="text-gray-500 hover:underline"
-              onClick={() => setCart([])}
+              onClick={() => clearCart()}
             >
               Remove all
             </button>
