@@ -44,7 +44,7 @@ const HomeMain = () => {
       {/* MIDDLE ZX7 SPEAKER */}
       <div className="w-full h-full mb-8 overflow-hidden relative overflow-hidden flex rounded">
         <div className="absolute px-8 top-[50%] -translate-y-1/2">
-          <h2 className="font-bold uppercase md:text-6xl sm:text-4xl text-2xl mb-4">
+          <h2 className="font-bold uppercase md:text-6xl sm:text-4xl text-2xl mb-8">
             ZX7 Speaker
           </h2>
           <Link to="speakers/zx7-speaker">
@@ -82,7 +82,7 @@ const HomeMain = () => {
           <h2 className="font-bold uppercase sm:text-4xl text-2xl mb-4">
             YX1 Earphones
           </h2>
-          <div>
+          <div className="mt-4">
             <Link to={"earphones/yx1-earphones"}>
               <Button v={2} text={"see product"} />
             </Link>

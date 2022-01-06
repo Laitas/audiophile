@@ -9,42 +9,42 @@ const QuantityButton = ({ quantity, item, qty, setQty }) => {
     return (
       <div className="flex items-center h-full bg-custom-gray font-bold">
         {qty <= 1 ? (
-          <span className="flex flex-1 justify-center cursor-pointer  text-gray-500 hover:text-orange">
+          <button className="font-bold flex flex-1 justify-center cursor-pointer  text-gray-500 hover:text-orange">
             -
-          </span>
+          </button>
         ) : (
-          <span
+          <button
             onClick={() => setQty(prevValue => prevValue - 1)}
-            className="flex flex-1 justify-center cursor-pointer  text-gray-500 hover:text-orange"
+            className="font-bold flex flex-1 justify-center cursor-pointer  text-gray-500 hover:text-orange"
           >
             -
-          </span>
+          </button>
         )}
         <span className="flex flex-1 justify-center">{qty}</span>
-        <span
+        <button
           onClick={() => setQty(prevValue => prevValue + 1)}
-          className="flex flex-1 justify-center cursor-pointer text-gray-500 hover:text-orange"
+          className="font-bold flex flex-1 justify-center cursor-pointer text-gray-500 hover:text-orange"
         >
           +
-        </span>
+        </button>
       </div>
     );
   }
   return (
     <div className="flex items-center h-full bg-custom-gray font-bold">
-        <span
+        <button
           onClick={() => decrease(item)}
-          className="flex flex-1 justify-center cursor-pointer  text-gray-500 hover:text-orange"
+          className="font-bold flex flex-1 justify-center cursor-pointer  text-gray-500 hover:text-orange"
         >
           -
-        </span>
+        </button>
       <span className="flex flex-1 justify-center">{quantity}</span>
-      <span
+      <button
         onClick={() => increase(item)}
-        className="flex flex-1 justify-center cursor-pointer text-gray-500 hover:text-orange"
+        className="font-bold flex flex-1 justify-center cursor-pointer text-gray-500 hover:text-orange"
       >
         +
-      </span>
+      </button>
     </div>
   );
 };
