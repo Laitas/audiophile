@@ -1,13 +1,16 @@
+import { Suspense, lazy } from "react";
 import Nav from "./components/Nav";
-import Homepage from "./pages/Homepage";
 import Footer from './components/Footer'
 import { BrowserRouter,Routes,Route} from "react-router-dom";
-import Speakers from "./pages/Speakers";
-import Headphones from "./pages/Headphones";
-import Earphones from "./pages/Earphones";
-import Product from "./pages/Product";
 import { CartProvider } from "./context/CartContext";
-import Checkout from "./pages/Checkout";
+import LoadingSpinner from './components/LoadingSpinner'
+// PAGES 
+const Homepage = lazy(() => import('./pages/Homepage'));
+const Speakers = lazy(() => import('./pages/Speakers'));
+const Headphones = lazy(() => import('./pages/Headphones'));
+const Earphones = lazy(() => import('./pages/Earphones'));
+const Product = lazy(() => import('./pages/Product'));
+const Checkout = lazy(() => import('./pages/Checkout'));
 
 function App() {
   return (
@@ -16,6 +19,7 @@ function App() {
       <CartProvider>
       <div className="min-h-screen">
       <Nav/>
+      <Suspense fallback={<LoadingSpinner/>}>
       <Routes>
       <Route path='/' element={<Homepage/>}/>
       <Route path='/speakers' element={<Speakers/>}/>
@@ -24,6 +28,7 @@ function App() {
       <Route path='/checkout' element={<Checkout/>}/>
       <Route path='/:page/:id' element={<Product/>}/>
       </Routes>
+      </Suspense>
       </div>
       <Footer />
       </CartProvider>
