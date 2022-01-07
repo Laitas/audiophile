@@ -5,6 +5,7 @@ import { BrowserRouter,Routes,Route} from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 import LoadingSpinner from './components/LoadingSpinner'
 import ScrollToTop from "./components/ScrollToTop";
+import { CheckoutContextProvider } from "./context/CheckoutContext";
 // PAGES 
 const Homepage = lazy(() => import('./pages/Homepage'));
 const Speakers = lazy(() => import('./pages/Speakers'));
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <CartProvider>
+      <CheckoutContextProvider>
         <ScrollToTop/>
       <div className="min-h-screen">
       <Nav/>
@@ -33,6 +35,7 @@ function App() {
       </Suspense>
       </div>
       <Footer />
+      </CheckoutContextProvider>
       </CartProvider>
       </BrowserRouter>
     </div>

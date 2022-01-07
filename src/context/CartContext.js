@@ -40,7 +40,6 @@ const CartProvider = ({children}) => {
             0
             );
             setItemsTotal(sumOfTotalItems)
-            console.log(cart);
             if(cart.length > 0){
                 localStorage.setItem('cartItems', JSON.stringify(cart))
             }

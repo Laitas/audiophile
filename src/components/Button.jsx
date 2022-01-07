@@ -11,8 +11,8 @@ const Button = ({v, text, onClick}) => {
         return <span onClick={onClick} className='cursor-pointer text-center uppercase bg-black border border-black hover:bg-transparent hover:text-black transition-all duration-300 p-4 text-white font-bold text-sm tracking-wide'>{text}</span>
         case 3:
         return <span onClick={onClick} className='cursor-pointer text-center uppercase bg-transparent hover:text-orange transition-all duration-300 p-4 text-gray-400 font-bold text-sm tracking-wide flex items-center'>{text} <IconArrow className='ml-4'/></span>
-        case 'cart':
-        return <button onClick={onClick} className='cursor-pointer text-center uppercase bg-orange hover:bg-light-orange transition-all duration-300 p-4 text-white font-bold text-sm tracking-wide'>Add to cart</button>
+        case 'button':
+        return <button onClick={onClick} className='cursor-pointer text-center uppercase bg-orange hover:bg-light-orange transition-all duration-300 p-4 text-white font-bold text-sm tracking-wide'>{text}</button>
         default : 
         return <span onClick={onClick} className='cursor-pointer text-center uppercase bg-orange hover:bg-light-orange transition-all duration-300 p-4 text-white font-bold text-sm tracking-wide'>{text}</span>
     }

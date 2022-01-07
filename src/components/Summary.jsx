@@ -1,11 +1,12 @@
-import React, {useState, useContext } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { CheckoutContext } from "../context/CheckoutContext";
 import Button from "./Button";
 import CheckoutModal from "./CheckoutModal";
 
 const Summary = () => {
   const { cart, total } = useContext(CartContext);
-  const [modal,showModal] = useState(false)
+  const { preHandleSubmit, modal } = useContext(CheckoutContext)
   return (
     <div className="font-bold w-full">
       <h2 className="mb-8">Summary</h2>
@@ -50,9 +51,9 @@ const Summary = () => {
         <p className="text-orange">$ {(total + 50).toLocaleString()}</p>
       </div>
       <div className="flex flex-col">
-      <Button onClick={() => showModal(true)} text={"continue & pay"}/>
+      <Button v={'button'} onClick={() => preHandleSubmit()} text={"continue & pay"}/>
       </div>
-      {modal && <CheckoutModal showModal={showModal}/>}
+      {modal && <CheckoutModal />}
     </div>
   );
 };

@@ -62,7 +62,7 @@ const Product = () => {
                 <div className="w-[120px] mr-4">
                 <QuantityButton  quantity={quantity} item={product} qty={qty} setQty={setQty}/>
                 </div>
-                <Button v={'cart'} onClick={()=> addItem(product, qty)}/>
+                <Button v={'button'} text={'Add to cart'} onClick={()=> addItem(product, qty)}/>
             </div>
         </div>
         </div>

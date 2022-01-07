@@ -1,8 +1,9 @@
-import {useState} from "react";
+import {useContext} from "react";
+import { CheckoutContext } from "../context/CheckoutContext";
 import Input from "./Input";
 
 const RadioButtons = () => {
-    const [checkedRadio,setChecked] = useState('e-money')
+    const { checkedRadio, setChecked, errors, form,handleChange } = useContext(CheckoutContext)
   return (
       <div className="my-6 flex flex-col">
           <div className="grid sm:grid sm:grid-cols-2 sm:grid-rows-2">
@@ -18,8 +19,8 @@ const RadioButtons = () => {
 
       {checkedRadio === 'e-money' &&
       <div className="sm:grid sm:grid-cols-2 sm:gap-x-12">
-        <Input type={"number"} name={'enumber'} label={"e-Money Number"} placeholder={"23851992"} />
-        <Input type={"number"} name={'epin'} label={"e-Money PIN"} placeholder={"6891"} />
+        <Input type={"number"} name={'enum'} label={"e-Money Number"} placeholder={"23851992"} value={form.enum} onChange={handleChange} error={errors.enum}/>
+        <Input type={"number"} name={'epin'} label={"e-Money PIN"} placeholder={"6891"} value={form.epin} onChange={handleChange} error={errors.epin}/>
    
       </div>
       }

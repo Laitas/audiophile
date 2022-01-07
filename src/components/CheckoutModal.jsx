@@ -1,16 +1,13 @@
-import {useContext, useRef} from 'react'
+import {useContext} from 'react'
 import { CartContext } from '../context/CartContext'
-import useOutsideClick from '../hooks/useOutsideClick'
 import {Link} from 'react-router-dom'
 import Button from './Button'
-const CheckoutModal = ({showModal}) => {
+const CheckoutModal = () => {
     const {cart, total,clearCart} = useContext(CartContext)
-    const ref = useRef()
-    useOutsideClick(ref, () => showModal(false));
     const { id,name,image,price,quantity} = cart[0]
     return (
-        <div className='fixed flex flex-col justify-center items-center inset-0 bg-[rgba(0,0,0,0.3)]'>
-            <div ref={ref} className="flex flex-col bg-white p-6 rounded">
+        <div className='fixed flex flex-col justify-center items-center inset-0 z-50 bg-[rgba(0,0,0,0.3)]'>
+            <div className="flex flex-col bg-white p-6 rounded">
             <div className="flex">
             <p className='flex justify-center items-center w-24 h-24 text-4xl rounded-full text-white  bg-orange'>&#x2713;</p>
             </div>
