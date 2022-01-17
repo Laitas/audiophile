@@ -2,7 +2,7 @@
 
 Yet another challenge by FrontEnd Mentor (https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx)
 
-Live page (https://audiophile-bfjmsbyje-laitas.vercel.app)
+Live page (https://audiophile-one.vercel.app)
 
 ## What I learned
 
