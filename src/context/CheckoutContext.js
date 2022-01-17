@@ -17,7 +17,7 @@ const CheckoutContextProvider = ({ children }) => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setSubmitting] = useState(false);
   const [checkedRadio, setChecked] = useState("e-money");
-  const [modal,showModal] = useState(false)
+  const [modal, showModal] = useState(false);
 
   const validate = (form) => {
     let errors = {};
@@ -25,10 +25,7 @@ const CheckoutContextProvider = ({ children }) => {
     if (!name) {
       errors.name = true;
     }
-    if (
-      !email ||
-      !email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
-    ) {
+    if (!email || !email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)) {
       errors.email = true;
     }
     if (!phone) {
@@ -88,7 +85,7 @@ const CheckoutContextProvider = ({ children }) => {
     preHandleSubmit,
     checkedRadio,
     setChecked,
-    modal
+    modal,
   };
   return (
     <CheckoutContext.Provider value={values}>
